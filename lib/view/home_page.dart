@@ -26,16 +26,25 @@ class _HomePageState extends State<HomePage> {
                 Center(
                     child: Column(
                   children: [
+                    const SizedBox(
+                      height: 30,
+                    ),
                     const Text(
                       "Zikrlar soni:",
-                      style: TextStyle(fontSize: 50, color: Colors.white),
+                      style: TextStyle(
+                          fontSize: 50,
+                          color: Colors.white,
+                          fontFamily: 'Poppins'),
                     ),
                     const SizedBox(
                       height: 40,
                     ),
                     Text(
                       hisob.toString(),
-                      style: const TextStyle(fontSize: 55, color: Colors.white),
+                      style: const TextStyle(
+                          fontSize: 55,
+                          color: Colors.white,
+                          fontFamily: 'Poppins'),
                     ),
                   ],
                 )),
@@ -50,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                         zikr = "Alhamdulillah";
                         hisob++;
                       } else if (hisob == 66) {
-                        zikr = "La Ilha Illalloh";
+                        zikr = "La Ilaha Illalloh";
                         hisob++;
                       } else if (hisob == 99) {
                         zikr = "Subhanalloh";
@@ -64,7 +73,10 @@ class _HomePageState extends State<HomePage> {
                     child: Center(
                       child: Text(
                         zikr,
-                        style: TextStyle(fontSize: 30, color: Colors.white),
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontFamily: 'Poppins'),
                       ),
                     ),
                     decoration: BoxDecoration(
