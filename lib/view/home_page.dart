@@ -24,48 +24,49 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                    child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    const Text(
-                      "Zikrlar soni:",
-                      style: TextStyle(
-                          fontSize: 50,
-                          color: Colors.white,
-                          fontFamily: 'Poppins'),
-                    ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    Text(
-                      hisob.toString(),
-                      style: const TextStyle(
-                          fontSize: 55,
-                          color: Colors.white,
-                          fontFamily: 'Poppins'),
-                    ),
-                  ],
-                )),
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      const Text(
+                        "Zikrlar soni:",
+                        style: TextStyle(
+                            fontSize: 50,
+                            color: Colors.white,
+                            fontFamily: 'Poppins'),
+                      ),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      Text(
+                        hisob.toString(),
+                        style: const TextStyle(
+                            fontSize: 55,
+                            color: Colors.white,
+                            fontFamily: 'Poppins'),
+                      ),
+                    ],
+                  ),
+                ),
                 const SizedBox(
                   height: 150,
                 ),
                 GestureDetector(
                   onTap: () {
-                    setState(() {
-                      hisob++;
-                      if (hisob == 33) {
-                        zikr = "Alhamdulillah";
+                    setState(
+                      () {
                         hisob++;
-                      } else if (hisob == 66) {
-                        zikr = "La Ilaha Illalloh";
-                        hisob++;
-                      } else if (hisob == 99) {
-                        zikr = "Subhanalloh";
-                        hisob = 0;
-                      }
-                    });
+                        if (hisob == 33) {
+                          zikr = "Alhamdulillah";
+                        } else if (hisob == 66) {
+                          zikr = "La Ilaha Illalloh";
+                        } else if (hisob == 99) {
+                          zikr = "Subhanalloh";
+                          hisob = 0;
+                        }
+                      },
+                    );
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width * .8,
